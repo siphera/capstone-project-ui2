@@ -3,7 +3,7 @@ function getPosts() {
     let list = document.getElementById("items");
   
     // Fetch the data
-    fetch("http://127.0.0.1:5000/login")
+    fetch("http://127.0.0.1:5000/items")
       .then((response) => response.json())
       .then((json) => {
         console.log(json);

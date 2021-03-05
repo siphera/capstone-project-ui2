@@ -1,0 +1,14 @@
+#particles-js {
+    /* position: relative; */
+    width: 100%;
+    height: 100%;
+    /* background-image: url(https://i.postimg.cc/6p0W5Dkp/Gradient-BG.png); */
+    background: #282c34;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.er {
+    z-index: 1;
+}

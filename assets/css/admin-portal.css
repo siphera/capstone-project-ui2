@@ -9,6 +9,50 @@
     background-position: 50% 50%;
 }
 
-.er {
-    z-index: 1;
+.er{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 900px;
+    height: auto;
+    border-radius: 20px;
+    background: linear-gradient(132.23deg, rgba(78, 223, 255, 0.512) 2.32%, rgba(255, 255, 255, 0.10) 109.87%);
+    transform:translate(-50%,-50%);
+    backdrop-filter: blur(26px) saturate(100%) contrast(80%) brightness(90%);
+    -webkit-backdrop-filter: blur(26px) saturate(100%) contrast(80%) brightness(90%);
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.14);
+    overflow: hidden;
 }
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */    
+}
+
+.menu-items{
+    height: 20vh;
+    width: 200px;
+    background: #eeeeee;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2px;
+  }
+
+.menu-items :hover {
+    background: #2de4d4;
+  }
+
+  .head {
+      color: white;
+      text-align: center;
+  }

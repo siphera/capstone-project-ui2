@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/assets/css/login.css" />
+    <title>user Register</title>
+</head>
+
+<body>
+    <div id="particles-js"></div>
+    <section>
+        <div class="card">
+            <div class="container">
+                <h1>User Registration</h1>
+                <form id="register" onsubmit="event.preventDefault(); register()">
+                    <ul class="email-input-list">
+                        <li class="label">Email</li>
+                        <li>
+                            <input class="email-input" placeholder="user@email.com" name="user" />
+                        </li>
+                    </ul>
+                    <ul class="email-input-list">
+                        <li class="label">Role</li>
+                        <li>
+                            <input class="email-input" placeholder="admin/user" name="role"/>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li class="label">Password</li>
+                        <li><input class="email-input" placeholder="******" name="password"/></li>
+                    </ul>
+                    <button type="submit" class="login-btn">Register</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="/assets/js/register.js"></script>
+    <script src="/assets/js/particle.js"></script>
+</body>
+
+</html>

@@ -128,7 +128,7 @@ h1 {
     top: 50%;
     left: 50%;
     width: 555px;
-    height: 591px;
+    height: auto;
     border-radius: 20px;
     background: linear-gradient(132.23deg, rgba(78, 223, 255, 0.512) 2.32%, rgba(255, 255, 255, 0.10) 109.87%);
     transform:translate(-50%,-50%);

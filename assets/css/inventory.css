@@ -11,7 +11,7 @@ body {
   background: #282c34;
 }
 /* --- MODAL --- */
-.modal {
+/* .modal {
   display: none;
   position: fixed;
   z-index: 1;
@@ -46,7 +46,7 @@ body {
   color: black;
   text-decoration: none;
   cursor: pointer;
-}
+} */
 /* --- MODAL END --- */
 
 /* --- BOOTSRAP TABLE TWEAKS --- */

@@ -231,17 +231,17 @@ window.onload = function () {
     }
   }
 
-  info.addEventListener("click", function () {
-    setModalMessage(
-      "About - Inventory management",
-      "This page is where you keep track off the stock available, add new stock, remove stock and update prices",
-      "",
-      ""
-    );
-    modalConfirm.style.display = "none";
-    modalDeny.style.display = "none";
-    modalShow();
-  });
+  // info.addEventListener("click", function () {
+  //   setModalMessage(
+  //     "About - Inventory management",
+  //     "This page is where you keep track off the stock available, add new stock, remove stock and update prices",
+  //     "",
+  //     ""
+  //   );
+  //   modalConfirm.style.display = "none";
+  //   modalDeny.style.display = "none";
+  //   modalShow();
+  // });
 
   // If enter key is pressed while input field is focused, click submit
   dataField.addEventListener("keypress", function (e) {
@@ -275,24 +275,24 @@ window.onload = function () {
     focusField();
   });
 
-  clear.addEventListener("click", function () {
-    if (dataTable.rows.length > 1) {
-      setModalMessage(
-        "Confirm Table Deletion",
-        "Are you sure you want to delete all of the data?",
-        "Yes",
-        "No"
-      );
-      modalShow();
-      modalConfirm.addEventListener("click", truncateTable);
-      modalDeny.addEventListener("click", function () {
-        modalConfirm.removeEventListener("click", truncateTable);
-        modalHide();
-      });
-    } else {
-      focusField();
-    }
-  });
+  // clear.addEventListener("click", function () {
+  //   if (dataTable.rows.length > 1) {
+  //     setModalMessage(
+  //       "Confirm Table Deletion",
+  //       "Are you sure you want to delete all of the data?",
+  //       "Yes",
+  //       "No"
+  //     );
+  //     modalShow();
+  //     modalConfirm.addEventListener("click", truncateTable);
+  //     modalDeny.addEventListener("click", function () {
+  //       modalConfirm.removeEventListener("click", truncateTable);
+  //       modalHide();
+  //     });
+  //   } else {
+  //     focusField();
+  //   }
+  // });
 
   deleteLast.addEventListener("click", function () {
     if (dataTable.rows.length > 1) {

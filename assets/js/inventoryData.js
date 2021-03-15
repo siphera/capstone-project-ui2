@@ -4,7 +4,7 @@
     let list = document.getElementById("dataTable");
   
     // Fetch the data
-    fetch("http://127.0.0.1:5000/items")
+    fetch("https://cryptic-plains-12434.herokuapp.com/items")
       .then((response) => response.json())
       .then((json) => {
         console.log(json);
@@ -33,7 +33,7 @@
     let list = document.getElementById("order-total");
   
     // Fetch the data
-    fetch("http://127.0.0.1:5000/totalitems")
+    fetch("https://cryptic-plains-12434.herokuapp.com/totalitems")
       .then((response) => response.json())
       .then((json) => {
         console.log(json);
@@ -55,7 +55,7 @@
     let form = document.getElementById("inv");
     const inputs = form.getElementsByTagName("input");
 
-    fetch("http://127.0.0.1:5000/items/", {
+    fetch("https://cryptic-plains-12434.herokuapp.com/items/", {
         
             method: "POST",
             body: JSON.stringify({

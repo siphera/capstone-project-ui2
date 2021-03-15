@@ -3,7 +3,7 @@ function getPosts() {
     let list = document.getElementById("items");
   
     // Fetch the data
-    fetch("http://127.0.0.1:5000/items")
+    fetch("https://cryptic-plains-12434.herokuapp.com/items")
       .then((response) => response.json())
       .then((json) => {
         console.log(json);
@@ -28,7 +28,7 @@ function getPosts() {
     let list = document.getElementById("receipt");
   
     // Fetch the data
-    fetch("http://127.0.0.1:5000/bask")
+    fetch("https://cryptic-plains-12434.herokuapp.com/bask")
       .then((response) => response.json())
       .then((json) => {
         console.log(json);
@@ -56,7 +56,7 @@ function getPosts() {
       let list = document.getElementById("order-total");
     
       // Fetch the data
-      fetch("http://127.0.0.1:5000/total")
+      fetch("https://cryptic-plains-12434.herokuapp.com/total")
         .then((response) => response.json())
         .then((json) => {
           console.log(json);

@@ -76,7 +76,22 @@
       </table>
     </div>
 
-    <div id="modal" class="modal">
+    <div id="wrapper">
+      <p><a class="button" href="#popup1">Click Me</a></p>
+      <p><a class="button" href="#popup2">Click Me Too</a></p>
+    </div>
+    
+    <div id="popup1" class="overlay">
+      <div class="popup">
+        <h2>Info box</h2>
+        <a class="close" href="#">&times;</a>
+        <div class="content">
+          <p>This is done totally without JavaScript. Just HTML and CSS.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div id="modal" class="modal">
       <div class="modalContent">
         <span id="modalClose" class="close">&times;</span>
         <h3 id="modalHead">Alert</h3>
@@ -87,7 +102,7 @@
         <button class="btn btn-default btn-lg" id="modalDeny">Deny</button>
       </div>
     </div>
-  </div>
+  </div> -->
 
   <script src="/assets/js/inventory.js"></script>
   <script src="/assets/js/inventoryData.js"></script>

@@ -12,16 +12,15 @@ function getPosts() {
   }
   
   function createBlogItem(blog) {
-    const item = `<li>
-                    <span class="item">R${blog.price}</span>
+    const item = `<button>
+                    <span class="item">R${blog.price}</span></br>
                     <span class="category">${blog.product}</span>
-                  </li>`;
+                  </button>`;
     let list = document.getElementById("items");
     console.log("Hello");
     list.innerHTML += item;
   }
-  
-  getPosts();
+  getPosts(); // displaying the items on the buttons
 
   // get the bustket items
   function receipt() {
@@ -29,7 +28,7 @@ function getPosts() {
     let list = document.getElementById("receipt");
   
     // Fetch the data
-    fetch("http://127.0.0.1:5000/busk")
+    fetch("http://127.0.0.1:5000/bask")
       .then((response) => response.json())
       .then((json) => {
         console.log(json);
@@ -42,7 +41,7 @@ function getPosts() {
                     <td>${blog.pid}</td>
                     <td>${blog.product}</td>
                     <td>R${blog.price}</td>
-                    <td>${blog.quantity}</td>
+                    <td><button style="background-color: red; color: white;">Delete</button></td>
                 `;
     let list = document.getElementById("receipt");
     console.log("Hello");
@@ -50,8 +49,8 @@ function getPosts() {
   }
   
   receipt();
-  
-    // get the bustket items
+
+    // get the basket items
     function total() {
       // Get element to change
       let list = document.getElementById("order-total");
@@ -64,7 +63,6 @@ function getPosts() {
           json.forEach((blog) => totaldisp(blog));
         });
     }
-    
     function totaldisp(blog) {
       const item = `
                       <span>R${blog[0]}</span>
@@ -73,5 +71,4 @@ function getPosts() {
       console.log("Hello");
       list.innerHTML += item;
     }
-    
     total();

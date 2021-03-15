@@ -18,7 +18,7 @@
                     <td>${data.product}</td>
                     <td>${data.quantity}</td>
                     <td>R${data.price}</td>
-                    <td><button class="btn btn-default btn-lg">Edit</button><button class="btn btn-default btn-lg">Delete</button></td>
+                    <td><button class="btn btn-default btn-lg show" >Edit</button><button class="btn btn-default btn-lg">Delete</button></td>
                 `;
     let list = document.getElementById("dataTable");
     console.log("Hello");
@@ -74,4 +74,28 @@
             form.reset();
         });
 }
-// updateStock()
+
+
+// Click function for show the Modal
+
+$(".show").on("click", function(){
+  $(".mask").addClass("active");
+});
+
+// Function for close the Modal
+
+function closeModal(){
+  $(".mask").removeClass("active");
+}
+
+// Call the closeModal function on the clicks/keyboard
+
+$(".close, .mask").on("click", function(){
+  closeModal();
+});
+
+$(document).keyup(function(e) {
+  if (e.keyCode == 27) {
+    closeModal();
+  }
+});

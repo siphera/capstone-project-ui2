@@ -4,66 +4,34 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>test-ui</title>
-    <link rel="stylesheet" href="/assets/css/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"
-    />
+    <link rel="stylesheet" href="/assets/css/login.css" />
+    <title>user login</title>
   </head>
   <body>
-    <div class="register">
-      <div class="left">
-        <div class="order-window">
-          <table id="receipt">
-            <tbody>
-              <tr>
-                <td>#</td>
-                <td>Item</td>
-                <td>Price</td>
-                <td>Edit</td>
-              </tr>
-              <tr></tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="order-total" id="order-total"></div>
-      </div>
-      <div class="right">
-        <div class="categories">
-          <ul>
-            <li><a href="/login.html">Logout</a></li>
-            <!-- <li><a href="#">Beverages</a></li> -->
-            <!-- <li><a href="#">Soup/Salad</a></li> -->
-            <!-- <li><a href="#">Appetizers</a></li> -->
-            <!-- <li><a href="#">Entrees</a></li> -->
-            <!-- <li><a href="#">Desserts</a></li> -->
-          </ul>
-          <div class="wrap">
-            <div class="search">
-              <input
-                type="text"
-                class="searchTerm"
-                placeholder="What are you looking for?"
-              />
-              <button type="submit" class="searchButton">
-                <i class="fa fa-search"></i>
-              </button>
-            </div>
-          </div>
-        </div>
-        <div class="menu-items">
-          <ul id="items"></ul>
-          <!-- <ul>
-            <li>
-              <span class="item">Sandwitch</span>
-              <span class="category">Snack</span>
-            </li>
-            
-          </ul> -->
+    <div id="particles-js"></div>
+    <section>
+      <div class="card">
+        <div class="container">
+          <h1>User Login</h1>
+          <form id="login" onsubmit="event.preventDefault(); login()">
+            <ul class="email-input-list">
+              <li class="label">Email</li>
+              <li>
+                <input class="email-input" placeholder="user@email.com" name="username" required/>
+              </li>
+            </ul>
+            <ul>
+              <li class="label">Password</li>
+              <li><input type="password" class="email-input" placeholder="******" name="password" required/></li>
+            </ul>
+            <button type="submit" class="login-btn">Login</button>
+          </form>
         </div>
       </div>
-    </div>
-    <script src="/assets/js/script.js"></script>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="/assets/js/login.js"></script>
+    <!-- <script src="/assets/js/particle.js"></script> -->
   </body>
 </html>

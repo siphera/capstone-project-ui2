@@ -56,3 +56,30 @@
       color: white;
       text-align: center;
   }
+
+  
+
+  #menu li {
+    list-style-type: none;
+    float: left;
+    width: 15em;
+    height: 15em;
+    text-align: center;
+  }
+  
+  #menu ul {
+    margin-left: -2.5em
+  }
+  
+  #menu a {
+    text-decoration: none;
+    color: blue;
+    display: block;
+    border: 3px blue outset; 
+    background-color: #CCCCFF; 
+    height: 15em;
+  }
+  
+  #menu a:hover {
+    border: 3px blue inset;
+  }

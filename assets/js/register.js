@@ -2,7 +2,7 @@ function register() {
     let form = document.getElementById("register");
     const inputs = form.getElementsByTagName("input");
 
-    fetch("http://127.0.0.1:5000/register/", {
+    fetch("https://cryptic-plains-12434.herokuapp.com/register/", {
         
             method: "POST",
             body: JSON.stringify({

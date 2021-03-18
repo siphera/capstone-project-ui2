@@ -13,19 +13,48 @@
   }
   
   function inventoryItems(data) {
-    const item = `
+    const item = `<tr data-id=${data.pid}>
                     <td>${data.pid}</td>
-                    <td>${data.product}</td>
-                    <td>${data.quantity}</td>
-                    <td>R${data.price}</td>
-                    <td><button class="btn btn-default btn-lg show" >Edit</button><button class="btn btn-default btn-lg"type="button" onclick="deleteItem(${data.pid})">Delete</button></td>
+                    <td><input class="form-control" name="product" type="text" value="${data.product}"/></td>
+                    <td><input class="form-control" name="quantity" type="text" value="${data.quantity}"/></td>
+                    <td><input class="form-control" name="price" type="text" value="R${data.price}"/></td>
+                    <td><button class="btn btn-default btn-lg show" onclick="editItems(${data.pid})">Edit</button><button class="btn btn-default btn-lg"type="button" onclick="deleteItem(${data.pid})">Delete</button></td>
+                  </tr>
                 `;
     let list = document.getElementById("dataTable");
     console.log("Hello");
     list.innerHTML += item;
   }
-  
   inventory();
+
+  // =============EDIT================
+  function editItems(pid) {
+    if (confirm("Save changes?")) {
+      let item = document.querySelector(`[data-id="${pid}"`);
+      let inputs = item.getElementsByTagName("input");
+      console.log(item);
+  
+      let product = {
+        product: inputs[0].value,
+        quantity: inputs[1].value,
+        price: inputs[2].value,
+      };
+  
+      fetch(`https://cryptic-plains-12434.herokuapp.com/item/${pid}`, {
+        method: "PUT",
+        body: JSON.stringify(product),
+        headers: {
+          "Content-type": "application/json; charset=UTF-8",
+        },
+      })
+        .then((response) => response.json())
+        .then((json) => console.log(json));
+    } else {
+      alert("Changes Cancelled");
+  
+      console.log("Not saved");
+    }
+  }
 
   // =======delete item========
   function deleteItem(pid) {

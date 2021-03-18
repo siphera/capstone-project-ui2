@@ -18,7 +18,7 @@
                     <td>${data.product}</td>
                     <td>${data.quantity}</td>
                     <td>R${data.price}</td>
-                    <td><button class="btn btn-default btn-lg show" >Edit</button><button class="btn btn-default btn-lg">Delete</button></td>
+                    <td><button class="btn btn-default btn-lg show" >Edit</button><button class="btn btn-default btn-lg"type="button" onclick="deleteItem(${data.pid})">Delete</button></td>
                 `;
     let list = document.getElementById("dataTable");
     console.log("Hello");
@@ -26,6 +26,21 @@
   }
   
   inventory();
+
+  // =======delete item========
+  function deleteItem(pid) {
+    if (confirm("CONFIRM DELETE?")) {
+      fetch(`https://cryptic-plains-12434.herokuapp.com/item/${pid}`, {
+        method: "DELETE",
+      });
+      console.log(pid);
+    } else {
+      alert("Delete Cancelled");
+    }
+
+  // let item = document.querySelector(`[data-id="${ id }"]`);
+  // console.log(item);
+}
 
   // get the bustket items
   function totalItems() {
@@ -76,6 +91,8 @@
 }
 
 
+
+// ============================================================
 // Click function for show the Modal
 
 $(".show").on("click", function(){

@@ -33,7 +33,7 @@ function getPosts() {
   })
 
   function buy(pid) {
-    let shownItemList = document.getElementById('receip-list');
+    let shownItemList = document.getElementById('receipt');
     let filteredProducts = cart.filter(foodcart => {
       return foodcart.pid == pid;
     })
@@ -42,7 +42,10 @@ function getPosts() {
       let product_price = parseInt(item.price)
       total = total + product_price;
       shownItemList.innerHTML += `
-      <p class="cart" style="color:white">${item.product} ${item.price}</p>`
+      <td>${item.pid}</td>
+      <td>${item.product}</td>
+      <td>R${item.price}</td>
+    `
       document.getElementById('order-total').innerHTML = total;
     });
     console.log(filteredProducts)
@@ -87,7 +90,7 @@ function getPosts() {
   //       .getAttribute("product-price");
   
   //     let total = parseInt(y) + parseInt(x);
- Id("receipt");
+//  Id("receipt");
   //   console.log("Hello");
   //   list.innerHTML += item;
   // }
